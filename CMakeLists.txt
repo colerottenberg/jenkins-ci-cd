@@ -22,7 +22,7 @@ add_executable(Testing src/main.c)
 target_include_directories(Testing PRIVATE include)
 
 
-add_executable(test_runner tests/always_pass.c)
+add_executable(test_runner test/always_pass.c)
 target_link_libraries(test_runner PRIVATE unity)
 target_include_directories(test_runner PRIVATE include)
 

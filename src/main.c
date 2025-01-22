@@ -7,7 +7,15 @@ typedef struct Point {
   int z;
 } Point;
 
-int main(int argc, char *argv[]) {
+void point_init(Point *self, int x, int y, int z) {
+  self->x = x;
+  self->y = y;
+  self->z = z;
+}
+
+void point_deinit(Point *self) { free(self); }
+
+int main() {
   printf("Hello World");
   Point **arr = (Point **)malloc(sizeof(Point *) * 4);
   static int count = 0;
